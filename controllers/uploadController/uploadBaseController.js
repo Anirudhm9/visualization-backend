@@ -3,7 +3,7 @@
  */
 
 /**
- * Please use appLogger for logging in this file try to abstain from console
+ * Please use //applogger for logging in this file try to abstain from console
  * levels of logging:
  * - TRACE - ‘blue’
  * - DEBUG - ‘cyan’
@@ -32,7 +32,7 @@ var uploadImage = function (payloadData, callback) {
       thumbnail: null
     }
   }
-  appLogger.info("????????",checkFileExtension(imageFile.hapi.filename))
+  //applogger.info("????????",checkFileExtension(imageFile.hapi.filename))
   async.series([
     function (cb) {
       if (payloadData.hasOwnProperty("imageFile") && imageFile && imageFile.hapi.filename) {
@@ -42,7 +42,7 @@ var uploadImage = function (payloadData, callback) {
           } else {
             imageFileURL = {
               original: uploadedInfo.profilePicture,
-              thumbnail: uploadedInfo.profilePictureThumb
+              //thumbnail: uploadedInfo.profilePictureThumb
             }
             cb();
           }

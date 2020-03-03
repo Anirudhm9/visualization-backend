@@ -3,7 +3,8 @@
  */
 'use strict'
 module.exports = {
-    User:require('./user'),
-    ForgetPassword:require('./forgotPasswordRequest'),
-    Admin: require('./admin')
+    User: require('./user'),
+    ForgetPassword: require('./forgotPasswordRequest'),
+    Admin: require('./admin'),
+    Block: require('./block')
 };

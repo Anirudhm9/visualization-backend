@@ -13,6 +13,7 @@ var adminLogin = {
     description: "Admin Login",
     tags: ["api", "admin"],
     handler: function (request, h) {
+      var payloadData = request.payload;
       return new Promise((resolve, reject) => {
         if (!UniversalFunctions.verifyEmailFormat(payloadData.emailId)) {
           reject(
