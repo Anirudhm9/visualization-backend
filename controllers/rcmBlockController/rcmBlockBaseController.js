@@ -167,10 +167,25 @@ var deleteBlock = function (payloadData, callback) {
           cb();
         }
       })
+    },
+
+    function (cb) {
+      Service.BlockService.getBlock({}, { __v: 0 }, {}, function (err, data) {
+        if (err) cb(err)
+        else {
+          if (data.length == 0) {
+            output = [];
+          }
+          else {
+            output = data || null;
+          }
+          cb();
+        }
+      })
     }
   ], function (error, result) {
     if (error) return callback(error);
-    else return callback(null)
+    else return callback(null, output)
   })
 };
 
