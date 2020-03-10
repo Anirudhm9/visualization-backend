@@ -18,7 +18,7 @@ var deleteBlock = function (criteria, callback) {
 
 var getBlock = function (criteria, projection, options, callback) {
   options.lean = true;
-  Models.Block.find(criteria, projection, options, callback).limit(1).sort({ $natural: -1 });
+  Models.Block.find(criteria, projection, options, callback).sort({ $natural: -1 });
 };
 
 var getBlockPromise = function (criteria, projection, options) {
