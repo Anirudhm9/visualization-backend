@@ -5,5 +5,6 @@ module.exports = {
   UserService: require("./userService"),
   ForgetPasswordService: require("./forgetPasswordService"),
   AdminService: require("./adminService"),
-  BlockService: require('./blockService')
+  BlockService: require('./blockService'),
+  VisualizationService: require('./visualizationService')
 };
