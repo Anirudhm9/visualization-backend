@@ -21,9 +21,14 @@ var getVisualization = function (criteria, projection, options, callback) {
   Models.Visualization.find(criteria, projection, options, callback).sort({ $natural: -1 });
 };
 
+var getAggregateVisualization = function (criteria, callback) {
+  Models.Visualization.aggregate(criteria, callback).hint({$natural: -1});
+};
+
 module.exports = {
   updateVisualization: updateVisualization,
   createVisualization: createVisualization,
   deleteVisualization: deleteVisualization,
   getVisualization: getVisualization,
+  getAggregateVisualization: getAggregateVisualization
 };

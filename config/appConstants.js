@@ -213,6 +213,11 @@ var STATUS_MSG = {
       statusCode: 400,
       customMessage: "Inavlid email format",
       type: "INVALID_EMAIL_FORMAT"
+    },
+    INVALID_DATE_KEY: {
+      statusCode: 400,
+      customMessage: "Date key required in configuration",
+      type: "INVALID_DATE_KEY"
     }
   },
   SUCCESS: {

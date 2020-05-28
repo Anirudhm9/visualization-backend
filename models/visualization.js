@@ -3,6 +3,8 @@ var Schema = mongoose.Schema;
 var Config = require('../config');
 
 var visualization = new Schema({
+  csvLink: { type: String },
+  workspace: { type: String, trim: true, unique: true },
   config: {
     location: [
       {
