@@ -415,7 +415,7 @@ var getFilteredData = function (payloadData, callback) {
     },
     function (cb) {
       if ((payloadData.hasOwnProperty("uniqueEntity") && payloadData.uniqueEntity != "" & payloadData.uniqueEntity != undefined && payloadData.uniqueEntity != null) && payloadData.selectedVisualizations.Trajectory) {
-        Service.VisualizationService.getVisualization({ csvLink: payloadData.csvLink }, {}, {}, function (err, data) {
+        Service.VisualizationService.getVisualization({ csvLink: payloadData.csvLink, workspace: payloadData.workspace }, {}, {}, function (err, data) {
           if (err) cb(err)
           else {
             console.log('!!!!!!!!!', data)
