@@ -44,7 +44,7 @@
     "moment-range": "4.0.2",
     "mongoose": "5.8.0",
     "randomstring": "1.1.5",
-    "socket.io": "2.2.0",
+    "socket.io": "2.4.0",
     "underscore": "1.9.1",
     "validator": "11.0.0"
   },
